@@ -1,0 +1,26 @@
+{
+    "langInitial": "fr",
+    "languages": [
+        {
+            "name": "francais",
+            "code": "fr",
+            "allTrad": [
+                {
+                    "key": "Home",
+                    "traduction": "Acceuil"
+                }
+            ]
+        },
+        {
+            "name": "english",
+            "code": "en",
+            "allTrad": [
+                {
+                    "key": "Home",
+                    "traduction": "Home"
+                }
+            ]
+        }
+    ],
+    "author": "Guillian"
+}

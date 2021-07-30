@@ -1,0 +1,315 @@
+@import url("./font-face.css");
+@import url("./scrollbar.css");
+@import url("./loader.css");
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./navbar.css");
+@import url("./swiper.css"); 
+@import url("./parallax.css");
+@import url("./content.css");
+@import url("./responsive.css");
+
+:root {
+    --primary-color: white;
+    --secondary-color: rgb(22,22,22);
+}
+
+body{
+    padding: 0;
+    margin: 0px;
+    background: var(--primary-color);
+}
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+
+.Construction{
+    width: 100%;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px lightgray;
+    font-family: "JosefinSans-Bold";
+    text-align: center;
+    line-height: 3;
+    font-size: 10vh;
+    word-break: break-all;
+}
+
+*,* :after ,*:before{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+/* CONTENT */
+
+.content{
+    z-index: 5000;
+    width: 100vw;
+    font-family: "JosefinSans-Bold";
+}
+
+.content div{
+    color: var(--secondary-color);
+}
+
+
+.content-title{
+    position: relative;
+    text-align: center;
+    padding: 5vh;
+    font-size: 8vw;
+    word-break: break-all;
+}
+
+.content-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    height: fit-content;
+    flex-wrap: wrap;
+   
+}
+
+.cb-scroll{
+    overflow: auto;
+}
+
+.cb-nowrap{
+    flex-wrap: nowrap;
+}
+
+.cb-vertical{
+    flex-direction: column;
+}
+
+.cb-center{
+    align-items:center;
+}
+
+.cb-translateY{
+
+    transform: translateY(10vh);
+   
+}
+
+.ct-100{
+    margin: 2.5%;
+    width: 95%;
+}
+
+.ct-50{
+    margin: 2.5%;
+    min-width: 45%;
+    width: 45%;
+    max-width: 95%;
+    flex-grow: 1;
+}
+
+.ct-33{
+    margin: 2.5%;
+    min-width: 27%;
+    width: 27%;
+    max-width: 95%;
+    flex-grow: 1;
+}
+
+
+
+.h2-title{
+    font-family: "JosefinSlab-Bold";
+    width: 100%;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.h2-absolute{
+    transform: translateY(-3vh);
+    position: absolute;
+}
+
+
+
+/* BLOCKS */
+
+.block-50 {
+    width: 50%;
+    padding: 1.25%;
+    z-index: 5200;
+    position: relative;
+}
+
+.block-100{
+    width: 100%;
+    padding: 2.5%;
+    z-index: 5200;
+    position: relative;
+}
+
+
+.block-50,.block-100 p{
+    font-family: "JosefinSlab-medium";
+    font-size: 2vw; 
+    text-align: justify;
+}
+
+.image-cover{
+    z-index: 5300;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card-light{
+        box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+}
+
+
+.grow2{
+    flex-grow: 2;
+    width: auto;
+}
+
+.ct-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15000;
+    transition: all 0.5s ease;
+    transform: scale(0);
+}
+
+.ct-fixed-background{
+    background-color: var(--secondary-color);
+    opacity: 0.8;
+    z-index: 14010 !important;
+}
+
+.ct-event-none{
+ 
+    pointer-events: none;
+}
+
+
+@media (max-width: 960px) {
+
+    /* CONTENT */
+
+    .content-title{
+        font-size: 10vw;
+    }
+
+    .ct-50{
+        flex-grow: 1;
+        margin: 2.5%;
+        width: 95%;
+    }
+
+
+    .ct-33{
+        margin: 2.5%;
+        min-width: 45%;
+        width: 45%;
+        max-width: 95%;
+        flex-grow: 1;
+    }
+
+    /* BLOCK */
+
+    .h2-absolute{
+        transform: translateY(-3vw);
+      
+    }
+
+    .h2-title{
+        font-size: 5vw;
+    }
+
+ 
+
+    .block-50,.block-100 p{
+        font-size: 3vw;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+
+    /* CONTENT PART */
+
+ 
+    
+    .content-title{
+        font-size: 18vw;
+    }
+
+    .content-title-small{
+        font-size: 13vw;
+    }
+
+
+    .content-block{
+        flex-direction: column;
+    }
+
+
+    .content-block div{
+        width: 100%;
+    
+    }
+
+    .ct-100{
+        width: 95%  !important;
+    }
+
+    .ct-33{
+        flex-grow: 1;
+        margin: 2.5%;
+        width: 95%;
+    }
+
+    /* BLOCKS */
+
+    .h2-absolute{
+        transform: translateY(0);
+        position: relative;
+    }
+
+    .h2-title{
+        font-size: 5vh;
+    }
+
+
+    .block-50,.block-100 p{
+        font-size: 3.5vh;
+        padding:2.5%;
+        text-align: center;
+    }
+
+
+
+ 
+    .image-cover{
+        
+        transform-origin: center center;
+    }
+
+    .image-cover:hover{
+        
+        transform: scale(1.1) !important;
+    }
+
+}
+

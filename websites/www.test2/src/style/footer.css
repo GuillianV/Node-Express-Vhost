@@ -1,0 +1,44 @@
+footer{
+    bottom: 0;
+    margin-top: 10vh;
+    background-color: var(--secondary-color);
+  
+    font-family: "JosefinSans-Medium";
+    color: var(--primary-color);
+    text-align: center;  
+}
+
+footer div{
+    padding: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    width: 20px;
+    color: var(--primary-couleur);
+    border-style: none !important;
+    outline:none;
+}
+
+footer img{
+    width: 5vh;
+    height: 5vh;
+    border-style: none !important;
+    outline:none;
+    filter: grayscale(100%);
+    transition: cubic-bezier(0.8, 0.7,0.4, 1) 1s all;
+}
+
+footer img:hover{
+    filter: grayscale(0%);
+    transform: rotate(360deg);
+}
+
+.block-footer{
+    transform: translateY(0) !important;
+}
+
+.crosslink-Facebook{
+   background: url("../assets/icons/facebookHover.png") center center no-repeat;
+   background-size: cover;
+}

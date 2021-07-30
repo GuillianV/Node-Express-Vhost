@@ -1,0 +1,101 @@
+Server 
+
+
+
+// const fs = require('fs');
+// // let Trads = require('./public-parcel/assets/traduction/trad.json');
+// let rawdata = fs.readFileSync('./public-parcel/assets/traduction/trad.json');
+// let Trads2 = JSON.parse(rawdata);
+// // console.log(Trads2);
+
+
+
+
+
+
+// app.use(bodyParser.urlencoded({ extended: true }));
+
+// app.post('/trads', function(req, res){
+
+
+//     let body = '';
+//     req.on('data', chunk => {
+//         body += chunk.toString(); 
+//     });
+//     req.on('end', () => {
+        
+//         if(isJson(body)){
+//             let data = JSON.parse(body);
+//             if(data.lang != null && data.trad != null && data.key != null){
+//                 console.log(data);
+//                 updateTrads(data.lang,data.key,data.trad)
+//             }else{
+//                 res.end('error');
+//             }
+//         }else{
+//             res.end('error');
+//         }
+//     });
+
+// });
+
+// function updateTrads(_lang,_key,_trad){
+
+//     let language = {}
+
+//     for(languages of Trads2.languages){
+//         if(languages.code == _lang){
+//             language = languages
+//         }
+//     }
+
+//     if(language != {}){
+//         for(Trad of language.allTrad){
+//             if(Trad.key == _key){
+//                 Trad.traduction = _trad;
+//             }
+//         }
+//     }
+
+
+//     // Trads2.languages[0].allTrad[0].traduction = 'BITE';
+//     // console.log(Trads2.languages[0].allTrad)
+//     let data = JSON.stringify(Trads2);
+//     fs.writeFile('./public-parcel/assets/traduction/trad.json', data,function(){
+        
+//     });
+// }
+
+
+// function isJson(str) {
+//     try {
+//         JSON.parse(str);
+//     } catch (e) {
+//         return false;
+//     }
+//     return true;
+// }
+
+// setTimeout(function(){
+//     f()
+// },1000)
+
+//-----------------GEstion des paths
+
+// myDatabase.client.query("select * FROM traduction WHERE _cletraduction = 'Home'", (err, res) => {
+//     if (err != null) {
+//         console.log(err)
+//     } else if (res.rowCount >= 1) {
+//         for (trad of res.rows) {
+//             if (trad._traduction != null) {
+
+//                 console.log(trad._traduction)
+//             } else {
+//                 console.log("Aucune traduction trouvé")
+//             }
+//         }
+//     } else {
+//         console.log("Aucune traduction trouvé")
+//     }
+
+// })

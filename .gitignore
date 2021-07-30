@@ -1,0 +1,6 @@
+
+/node_modules
+/websites/www.test1/node_modules
+/websites/www.test1/.cache
+/websites/www.test2/node_modules
+/websites/www.test2/.cache

@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "JosefinSlab-ExtraLight";
+    src: url("../font/JosefinSlab/JosefinSlab-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: "JosefinSlab-Medium";
+    src: url("../font/JosefinSlab/JosefinSlab-Medium.ttf");
+}
+
+@font-face {
+    font-family: "JosefinSlab-Bold";
+    src: url("../font/JosefinSlab/JosefinSlab-Bold.ttf");
+}
+
+@font-face {
+    font-family: "JosefinSans-ExtraLight";
+    src: url("../font/JosefinSans/JosefinSans-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: "JosefinSans-Medium";
+    src: url("../font/JosefinSans/JosefinSans-Medium.ttf");
+}
+
+@font-face {
+    font-family: "JosefinSans-Bold";
+    src: url("../font/JosefinSans/JosefinSans-Bold.ttf");
+}
