@@ -1,23 +1,29 @@
 //---------------Gestion des imports
 let express = require("express")
 let http = require("https");
-const { hostname } = require("os");
+const fs = require('fs');
 
 // let { Pool, Client } = require('pg');
 // let myDatabase = require("./modules/databaseConnect.js")
 
 
+
+
 let app = express()
 let website_folder = 'websites'
+let websites = fs.readdirSync('./'+website_folder);
+let vhost_file = 'vhost.js'
+
 
 //Virtual Hosting Gestion
 const vhost = (hostname,app) => (req,res,next) => {
     const host = req.headers.host.split(':')[0]
-    if(host === hostname){
-        return app(req,res,next)
-    }else{
-        next()
+    for(_host of hostname){
+        if(host === _host){
+            return app(req,res,next)
+        }
     }
+    next()
 }
 
 //Preparing routes
@@ -32,13 +38,19 @@ function PrepareBasicRoutes(req,res,htmlFile,name_folder,public_folder = "dist")
 
 
 
-require('./websites/www.test1/test1.js')(app,express,vhost,PrepareBasicRoutes);
-require('./websites/www.test2/test2.js')(app,express,vhost,PrepareBasicRoutes);
+for (const website of websites) {
+
+    const vhost_path = "./"+website_folder+"/"+website+"/"+vhost_file
+    if(fs.existsSync(vhost_path)){
+        require(vhost_path)(app,express,vhost,PrepareBasicRoutes);
+    }
+
+}
 
 
 // Listen on port 8888
-app.listen(8888, function(){
-    console.log("Listening at port : "+8888)
+app.listen(80, function(){
+    console.log("Listening at port : "+80)
 });
 
 

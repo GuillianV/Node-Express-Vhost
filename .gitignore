@@ -1,6 +1,14 @@
 
 /node_modules
-/websites/www.test1/node_modules
-/websites/www.test1/.cache
-/websites/www.test2/node_modules
-/websites/www.test2/.cache
+/websites/www.cadocuir.com/node_modules
+/websites/www.cadocuir.com/dist
+/websites/www.cadocuir.com/.cache
+/websites/www.cadocuir.com/modules
+/websites/www.cadocuir.com/src
+
+
+/websites/www.guillian.net/node_modules
+/websites/www.guillian.net/dist
+/websites/www.guillian.net/.cache
+/websites/www.guillian.net/modules
+/websites/www.guillian.net/src
