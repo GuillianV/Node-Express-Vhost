@@ -2,8 +2,12 @@
 let express = require("express")
 let app = express()
 const bodyParser = require('body-parser');
-let http = require("https");
-let server = http.Server(app)
+let https = require("https");
+const fs = require('fs');
+const path = require("path") 
+
+
+let server = https.createServer(app)
 
 let gitignore = require("./modules/gitignore.js")
 
@@ -37,9 +41,11 @@ app.get('*', function(req, res){
 });
 
 
+
+let port = 80
 // Listen on port 8888
-app.listen(gitignore.listenPort, function(){
-    console.log("Listening at port : "+gitignore.listenPort)
+server.listen(port, function(){
+    console.log("Listening at port : "+port)
 });
 
 
