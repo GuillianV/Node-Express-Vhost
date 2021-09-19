@@ -5,6 +5,7 @@ require('../../server.js')
 module.exports = function (app, express, vhost, PrepareBasicRoutes) {
 
     const cdn = [
+        'localhost',
         'www.cadocuir.com',
         'cadocuir.com',
         'www.maroquinerie-maniglier.fr',
@@ -17,8 +18,19 @@ module.exports = function (app, express, vhost, PrepareBasicRoutes) {
 
     let cadocuir_com = express()
 
+
+    cadocuir_com.use(function (req, res, next) {
+        if(req.headers.host.substring(0,4).includes('www.')){
+
+            let host = req.headers.host
+            res.redirect('https://' + host.slice(4) + req.url);
+           
+        }else{
+            next()
+        }
+    });   
+
     cadocuir_com.use(express.static(__dirname + "/" + public_folder))
-    
 
 
     cadocuir_com.get("/", (req, res) => {

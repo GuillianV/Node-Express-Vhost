@@ -17,8 +17,8 @@ let certificate_folder = 'cert';
 let vhost_file = 'vhost.js'
 let websites = fs.readdirSync('./' + website_folder);
 
-let IsOnline = true;
-let offlinePort = 80;
+let IsOnline = false;
+let offlinePort = 8888;
 
 
 
@@ -36,14 +36,15 @@ server.listen(offlinePort, function () {
     console.log("Listening http")
 });
 
-
-app.use(function (req, res, next) {
-    if (!req.secure) {
-        res.redirect('https://' + req.headers.host + req.url);
-    } else {
-        next()
-    }
-});
+if(IsOnline){
+    app.use(function (req, res, next) {
+        if (!req.secure) {
+            res.redirect('https://' + req.headers.host + req.url);
+        } else {
+            next()
+        }
+    });    
+}
 
 
 
